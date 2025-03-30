@@ -1,103 +1,91 @@
-import Image from "next/image";
+import FormCosultant from "@/components/form";
+import { Ports, services } from "@/constants/contstant";
+import FlipCard from "@/components/flipcard";
+import Accordeon from "@/components/accordeon";
+import Port from "@/components/ports";
+import Header from "@/components/header";
+import { IoLogoWechat, IoLogoWhatsapp, IoMailOutline  } from "react-icons/io5";
+import Herosection from "@/components/herosection";
+
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  
+  return (
+    <div className="bg-slate-100 min-h-screen max-w-screen snap-y snap-mandatory scroll-smooth">
+      <main dir="rtl" className="w-full">
+        <Header />
+        <Herosection />
+
+        <div id="services" className="w-full min-h-screen  snap-y snap-start snap-mandatory pt-32 p-4">
+          <h1 className="font-bold text-2xl mb-16 text-center">خدمات</h1>
+          <div className="md:grid flex flex-col grid-cols-4 grid-rows-2  w-full gap-4 p-4">
+          {services.map((i,index)=>{
+            return <FlipCard key={index} {...i} />
+          })}
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+        <div id="ports" className="w-full min-h-screen  snap-y snap-start snap-mandatory pt-32 p-4">
+          <h1 className="font-bold text-2xl mb-10 text-center">بنادر اصلی همکار</h1>
+            <div className="flex flex-col md:flex-row justify-center items-center mx-auto w-full  md:w-2/3 gap-4 p-4">
+            {Ports.map((i,index)=>{
+              return <Port key={index} {...i} />
+            })}
+            </div>
+        </div>
+
+
+        <div id="faq" className="w-full min-h-screen  snap-y snap-start snap-mandatory pt-32 p-4">
+          <h1 className="font-bold text-2xl mb-10 text-center">سوالات متداول </h1>
+          <div className="flex flex-col gap-5">
+          <Accordeon/>
+          <Accordeon/>
+          <Accordeon/>
+          <Accordeon/>
+          </div>
+        </div>
+
+
+        
+        <div id="request_advise" className="w-full h-max snap-y snap-start snap-mandatory  p-4">
+          <h1 className="font-bold text-2xl mb-10 text-center"> درخواست مشاوره</h1>
+          <FormCosultant />
+        <h1 className="font-bold text-2xl mb-10 text-center mt-20">تماس با ما </h1>
+
+        <div id="contact_us" className="flex flex-col md:flex-row items-center justify-center gap-1 md:mb-0">
+          <div className="flex items-center rounded shadow group px-4 whitespace-nowrap transition-all duration-300 hover:bg-green-500 hover:text-white cursor-pointer">
+            <p className="font-bold w-0 whitespace-nowrap overflow-hidden group-hover:w-32 transition-all duration-300">00989028679502</p>
+            <p className="size-16 flex items-center justify-center p-2">
+              <IoLogoWechat className="size-full"/>
+            </p>
+           </div>
+
+           <div className="flex items-center rounded shadow group px-4 whitespace-nowrap transition-all duration-300 hover:bg-rose-500 hover:text-white cursor-pointer">
+              <p className="font-bold w-0 whitespace-nowrap overflow-hidden group-hover:w-52 transition-all duration-300 text-sm">Mahdiyenaderi1377@gmail.com</p>
+              <p className="size-16 flex items-center justify-center p-2 ">
+                <IoMailOutline className="size-full"/>
+              </p>
+            </div>
+            
+           <div className="flex items-center rounded shadow group px-4 whitespace-nowrap transition-all duration-300 hover:bg-green-500 hover:text-white cursor-pointer">
+              <p className="font-bold w-0 whitespace-nowrap overflow-hidden group-hover:w-32 transition-all duration-300">00989028679502</p>
+              <p className="size-16 flex items-center justify-center p-2 ">
+                <IoLogoWhatsapp className="size-full"/>
+              </p>
+            </div>
+
+
+        </div>
+        </div>
+
+        <div className="w-full h-max snap-y snap-start snap-mandatory  p-4"></div>
+        
+        
+      <footer className="w-full bg-slate-800 text-white font-bold text-sm p-4 mt-28 text-center snap-y snap-center snap-mandatory">
+        <p>تمامی حقوقی این وبسایت متعلق به <strong className="text-rose-600 px-2">مهدیه نادری</strong> می‌باشد.</p>
       </footer>
+      </main>
     </div>
   );
 }
