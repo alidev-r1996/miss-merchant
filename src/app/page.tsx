@@ -39,10 +39,10 @@ export default function Home() {
         <div id="faq" className="w-full min-h-screen  snap-y snap-start snap-mandatory pt-32 p-4">
           <h1 className="font-bold text-2xl mb-10 text-center">سوالات متداول </h1>
           <div className="flex flex-col gap-5">
-          <Accordeon/>
-          <Accordeon/>
-          <Accordeon/>
-          <Accordeon/>
+          <Accordeon id="item1"/>
+          <Accordeon id="item2"/>
+          <Accordeon id="item3"/>
+          <Accordeon id="item4"/>
           </div>
         </div>
 

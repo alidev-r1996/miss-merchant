@@ -1,9 +1,12 @@
-const Accordeon = () => {
+
+
+
+const Accordeon = ({id}: {id: string}) => {
     return ( 
         <div className="border border-emerald-300 shadow rounded-lg overflow-hidden">
-          <input type="checkbox" id="item1" className="peer/item1 hidden" />
+          <input type="checkbox" id={id} className="peer/item1 hidden" />
           <label
-            htmlFor="item1"
+            htmlFor={id}
             className="block font-bold md:text-xl cursor-pointer p-4 bg-gray-200 peer-checked/item1:bg-emerald-600  peer-checked/item1:text-white"
           >
           واردات کالا چقدر طول می‌کشد؟
