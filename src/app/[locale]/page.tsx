@@ -6,6 +6,7 @@ import Port from "@/components/ports";
 import Header from "@/components/header";
 import { IoLogoWechat, IoLogoWhatsapp, IoMailOutline  } from "react-icons/io5";
 import Herosection from "@/components/herosection";
+import Services from "@/components/services";
 
 
 export default function Home() {
@@ -13,18 +14,11 @@ export default function Home() {
   
   return (
     <div className="bg-slate-100 min-h-screen max-w-screen snap-y snap-mandatory scroll-smooth">
-      <main dir="rtl" className="w-full">
+      <main  className="w-full">
         <Header />
         <Herosection />
-
-        <div id="services" className="w-full min-h-screen  snap-y snap-start snap-mandatory pt-32 p-4">
-          <h1 className="font-bold text-2xl mb-16 text-center">خدمات</h1>
-          <div className="md:grid flex flex-col grid-cols-4 grid-rows-2  w-full gap-4 p-4">
-          {services.map((i,index)=>{
-            return <FlipCard key={index} {...i} />
-          })}
-          </div>
-        </div>
+        <Services />
+        
 
         <div id="ports" className="w-full min-h-screen  snap-y snap-start snap-mandatory pt-32 p-4">
           <h1 className="font-bold text-2xl mb-10 text-center">بنادر اصلی همکار</h1>

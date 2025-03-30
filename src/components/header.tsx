@@ -1,12 +1,14 @@
 'use client'
 
 import { Bars3Icon, LanguageIcon, MoonIcon } from "@heroicons/react/16/solid";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [show, setShow] = useState(false)
+    const t = useTranslations('Header');
 
     useEffect(() => {
         const handleScroll = () => {
@@ -21,7 +23,7 @@ const Header = () => {
 
     return ( 
         <header
-          className={`fixed top-0 left-0 z-[9999] min-w-screen flex items-center justify-between px-4 py-2 transition-all duration-300 ${
+          className={`sticky  top-0 z-[9999] w-full flex items-center justify-between px-4 py-2 transition-all duration-300 ${
             isScrolled ? "bg-white shadow" : "bg-transparent"
           }`}
         >
@@ -31,12 +33,12 @@ const Header = () => {
           <nav>
           
             <ul className={`${show? "flex": "hidden"} md:flex flex-col right-0 top-14 h-screen md:h-max md:flex-row bg-white/20 backdrop-blur-md md:bg-transparent w-full items-center absolute md:static`}>
-              <Link href='#home' className="font-bold hover:scale-110 hover:text-blue-600 hover:translate-1 transition-all duration-200 cursor-pointer p-4 text-lg">خانه</Link>
-              <Link href='#services' className="font-bold hover:scale-110 hover:text-blue-600 hover:translate-1 transition-all duration-200 cursor-pointer p-4 text-lg">خدمات</Link>
-              <Link href='#ports' className="font-bold hover:scale-110 hover:text-blue-600 hover:translate-1 transition-all duration-200 cursor-pointer p-4 text-lg">بنادر </Link>
-              <Link href='#faq' className="font-bold hover:scale-110 hover:text-blue-600 hover:translate-1 transition-all duration-200 cursor-pointer p-4 text-lg">سوالات متداول </Link>
-              <Link href='#request_advise' className="font-bold hover:scale-110 hover:text-blue-600 hover:translate-1 transition-all duration-200 cursor-pointer p-4 text-lg">درخواست مشاوره </Link>
-              <Link href='#contact_us' className="font-bold hover:scale-110 hover:text-blue-600 hover:translate-1 transition-all duration-200 cursor-pointer p-4 text-lg">تماس با ما</Link>
+              <Link href='#home' className="font-bold hover:scale-110 hover:text-blue-600 hover:translate-1 transition-all duration-200 cursor-pointer p-4 text-lg">{t('home')}</Link>
+              <Link href='#services' className="font-bold hover:scale-110 hover:text-blue-600 hover:translate-1 transition-all duration-200 cursor-pointer p-4 text-lg">{t('services')}</Link>
+              <Link href='#ports' className="font-bold hover:scale-110 hover:text-blue-600 hover:translate-1 transition-all duration-200 cursor-pointer p-4 text-lg">{t('ports')} </Link>
+              <Link href='#faq' className="font-bold hover:scale-110 hover:text-blue-600 hover:translate-1 transition-all duration-200 cursor-pointer p-4 text-lg">{t('faq')}  </Link>
+              <Link href='#request_advise' className="font-bold hover:scale-110 hover:text-blue-600 hover:translate-1 transition-all duration-200 cursor-pointer p-4 text-lg">{t('advice')}  </Link>
+              <Link href='#contact_us' className="font-bold hover:scale-110 hover:text-blue-600 hover:translate-1 transition-all duration-200 cursor-pointer p-4 text-lg">{t('contact')}  </Link>
             </ul>
           </nav>
           <div className="flex items-center gap-4">

@@ -1,0 +1,25 @@
+{
+    "Header": {
+        "home": "主页",
+        "services": "服务",
+        "ports": "港口",
+        "faq": "常见问题",
+        "advice": "咨询",
+        "contact": "联系我们"
+    },
+    "Footer": {
+        "text": "本网站的所有权归属",
+        "name": "马赫迪耶·纳德里"
+    },
+    "herosection": {
+        "slogan": "在国际贸易的世界里，我们与你同行！",
+        "text": "全程陪伴您的货物进口"
+    },
+    "services": {
+        "title": "服务",
+        "customs": "海关服务",
+        "trading": "外汇交易服务",
+        "insurance": "保险服务",
+        "transport": "运输服务"
+    }
+}

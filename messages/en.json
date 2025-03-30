@@ -1,0 +1,31 @@
+{
+    "Header":{
+        "home": "Home",
+        "services": "Services",
+        "ports": "Ports",
+        "faq": "FAQ",
+        "advice":"Advice",
+        "contact": "Contact"
+    },
+    "Footer":{
+        "text": "All rights to this website belong to",
+        "name": "mahdiyeh naderi"
+    },
+    "herosection":{
+        "slogan": "We are with you in the world of international trade!",
+        "text": "Accompanying you throughout all stages of importing goods"
+    },
+    "services":{
+        "title": "Services",
+        "customs": {
+            "title": "Customs services",
+            "options1": "",
+            "options2": "",
+            "options3": ""
+        },
+        "trading": "Trading foreign exchange services",
+        "insurance": "Insurance Services",
+        "transport": "Transportation services"
+    }
+
+}
