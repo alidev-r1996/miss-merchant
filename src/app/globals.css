@@ -1,9 +1,22 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+:root,
+:root[data-mode="light"] {
+  --main-bg: 241 245 249;
+  --header-bg: 255 255 255;
+  --text-header: 30 41 59;
+  --icon-color: 100 116 139;
+  --bg-color: 255 255 255;
 }
+
+:root[data-mode="dark"] {
+  --main-bg: 17 24 39;
+  --header-bg: 36 42 56;
+  --text-header: 255 255 255;
+  --icon-color: 255 255 255;
+  --bg-color: 17 24 39;
+}
+
 
 @theme inline {
   --color-background: var(--background);

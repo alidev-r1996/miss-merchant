@@ -1,7 +1,10 @@
+import { useTranslations } from "next-intl";
+import { useFormStatus } from "react-dom";
+
 type ButtonProps = {
   color: "primary" | "secondary" | "transparent";
   size: "full" | "max";
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
   disabled?: boolean;
   clickAction?: () => void
@@ -26,8 +29,13 @@ const ButtonUi: React.FC<ButtonProps> = ({
   className,
   clickAction
 }) => {
+  const { pending } = useFormStatus();
+  const t = useTranslations();
+
   return (
-    <button {...clickAction && {onClick: clickAction}} disabled={disabled} className={`${className} ${colors[color]} ${sizes[size]} ${disabled && "!text-slate-500 bg-transparent"} disabled:pointer-events-none px-3 py-2 rounded-full transition-all duration-300 flex flex-nowrap items-center gap-2 hover:scale-105 active:scale-90`}>{children}</button>
+    <button {...clickAction && {onClick: clickAction}} disabled={disabled} className={`${className} ${colors[color]} ${sizes[size]} ${disabled && "!text-slate-500 bg-transparent"} disabled:pointer-events-none px-3 py-2 rounded-full transition-all duration-300 flex flex-nowrap items-center gap-2 hover:scale-105 active:scale-90`}>
+      {!pending ? t("submitButton") : t('submitButtonLoading')} {children}
+    </button>
   );
 };
 

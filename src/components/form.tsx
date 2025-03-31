@@ -1,3 +1,5 @@
+'use client'
+
 import { action } from "@/lib/action";
 import ButtonUi from "@/ui/button";
 import TextField from "@/ui/textField";
@@ -6,6 +8,7 @@ import { useTranslations } from "next-intl";
 const FormCosultant = () => {
   const t = useTranslations();
   const formConsultantItems = t.raw("formConsultantItems"); // Fetch form fields from JSON
+  
 
   return (
     <form
@@ -29,7 +32,7 @@ const FormCosultant = () => {
           color="primary"
           className="col-span-2 px-10 mx-auto"
         >
-          {t("submitButton")}{" "}
+          
         </ButtonUi>
       </div>
     </form>

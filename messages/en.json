@@ -85,7 +85,6 @@
       "name": "representative"
     }
   ],
-  "submitButton": "Request Consultation",
   "FAQ": [
     {
       "title": "How long does it take to import goods?",
@@ -115,5 +114,7 @@
       "title": "How are import costs calculated?",
       "reply": "Import costs depend on factors such as:\n- Freight charges\n- Customs duties and taxes\n- Insurance fees\n- Handling and clearance costs"
     }
-  ]
+  ],
+  "submitButton": "Request Consultation",
+  "submitButtonLoading": "Sending..."
 }

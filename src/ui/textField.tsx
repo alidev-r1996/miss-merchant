@@ -15,7 +15,7 @@ const TextField: React.FC<TextFieldProps> = ({ name, id, label, placeholder, cla
     >
       {label}
       <input
-        type="text"
+        type={name == "mail" ? "email": "text"}
         name={name}
         placeholder={placeholder}
         className={`p-2 rounded placeholder:text-xs bg-slate-800 outline-none focus:border focus:border-slate-500`}
