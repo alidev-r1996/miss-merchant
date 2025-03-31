@@ -7,7 +7,7 @@ export async function action(formData: FormData) {
 
   try {
     const form = Object.fromEntries(formData.entries());
-    const res = await fetch("http://localhost:3000/api", {
+    const res = await fetch("https://miss-merchant.vercel.app/api", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),
