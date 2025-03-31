@@ -8,7 +8,7 @@ export type FlipCardProps = {
 
 const FlipCard: React.FC<FlipCardProps> = ({options,src,title}) => {
     return ( 
-        <div className="card col-span-1 aspect-square w-full rounded shadow overflow-hidden">
+        <div className="card col-span-1 aspect-square w-full rounded overflow-hidden">
             <div className="card__content text-center relative transition-transform duration-500 text-white font-bold cursor-p">
             <div className="col-span-1 relative aspect-square w-full rounded shadow overflow-hidden card__front">
               <Image alt="" fill src={src}/>

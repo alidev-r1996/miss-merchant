@@ -72,4 +72,70 @@ export const Ports = [
   },
 ];
 
+export const heaerItems = [
+  {
+    id: 1,
+    title: "home",
+    href: "#home",
+  },
+  {
+    id: 2,
+    title: "services",
+    href: "#services",
+  },
+  {
+    id: 3,
+    title: "ports",
+    href: "#ports",
+  },
+  {
+    id: 4,
+    title: "faq",
+    href: "#faq",
+  },
+  {
+    id: 5,
+    title: "advice",
+    href: "#request_advise",
+  },
+  {
+    id: 6,
+    title: "contact",
+    href: "#contact-us",
+  },
+];
+
+export const Countries = [
+  {
+    id: 1,
+    title: "Iran",
+    href: "/fa",
+    code: "IR",
+  },
+  {
+    id: 2,
+    title: "English",
+    href: "/en",
+    code: "GB",
+  },
+  {
+    id: 3,
+    title: "India",
+    href: "/hi-IN",
+    code: "IN",
+  },
+  {
+    id: 4,
+    title: "China",
+    href: "/zh-CN",
+    code: "CN",
+  },
+  {
+    id: 5,
+    title: "Arabic",
+    href: "/ar-AE",
+    code: "AE",
+  },
+];
+
 
