@@ -21,7 +21,7 @@ const Vazir = Vazirmatn({
 })
 
 export const metadata: Metadata = {
-  title: "Mahdiyeh Naderi | merchant",
+  title: "Mahdiyeh Naderi | Merchant",
   description: "",
 };
 

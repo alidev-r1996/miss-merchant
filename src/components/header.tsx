@@ -58,7 +58,8 @@ const Header = () => {
             return (
               <li
                 key={i.id}
-                className={`${isScrolled ? "md:hover:text-blue-600" : "md:bg-white/20 backdrop-blur md:text-blue-600 p-1 rounded-full hover:bg-blue-500 hover:text-white"} md:ml-4 md:my-0 my-2  text-center hover:translate-1 transition-all duration-200 cursor-pointer`}
+                onClick={() => setShow(false)}
+                className={`${isScrolled ? "md:hover:text-white" : "md:bg-white/20 backdrop-blur md:text-blue-600  "} md:ml-4 md:my-0 my-2 hover:bg-blue-500 hover:text-white  p-1 rounded-full text-center hover:translate-1 transition-all duration-200 cursor-pointer`}
               >
                 <Link
                   href={i.href}
