@@ -4,11 +4,15 @@ import { Bars3Icon, LanguageIcon, MoonIcon } from "@heroicons/react/16/solid";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Flag from 'react-world-flags'
+
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [show, setShow] = useState(false)
     const t = useTranslations('Header');
+    const [language, setLanguage] = useState(false)
+  
 
     useEffect(() => {
         const handleScroll = () => {
@@ -18,7 +22,8 @@ const Header = () => {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
       }, []);
-    
+
+      
 
 
     return ( 
@@ -41,11 +46,38 @@ const Header = () => {
               <Link href='#contact_us' className="font-bold hover:scale-110 hover:text-blue-600 hover:translate-1 transition-all duration-200 cursor-pointer p-4 text-lg">{t('contact')}  </Link>
             </ul>
           </nav>
-          <div className="flex items-center gap-4">
-            <p className="rounded-full shadow size-10 p-1.5">
+          <div className="flex items-center gap-4 ">
+            <div onClick={()=>setLanguage(!language)} className="rounded-full shadow size-10 p-1.5 relative bg-slate-300/50 cursor-pointer hover:bg-white">
               <LanguageIcon />
-            </p>
-            <p className="rounded-full shadow size-10 p-1.5">
+              <div className={`${language ? "h-72": "h-0"} flex transition-all duration-300 flex-col gap-2 absolute top-14 -left-1 overflow-hidden`}>
+              {/* Iran Flag */}
+              <Link onClick={()=>setLanguage(false)} href='/fa' title="Iran" className="border border-gray-300 flex items-center justify-center cursor-pointer transition-all duration-300 bg-slate-300/50 backdrop-blur-md  shadow p-2 rounded-full size-12 hover:bg-gray-50">
+                <Flag code="IR" style={{ width: '30px', height: '20px' }} />
+              </Link>
+              
+              {/* English Flag (Use "GB" for the UK flag, for English-speaking countries) */}
+              <Link onClick={()=>setLanguage(false)} href='/en' title="English" className="border border-gray-300 flex items-center justify-center cursor-pointer transition-all duration-300 bg-slate-300/50 backdrop-blur-md  shadow p-2 rounded-full size-12 hover:bg-gray-50">
+                <Flag code="GB" style={{ width: '30px', height: '20px' }} />
+              </Link>
+              
+              {/* India Flag */}
+              <Link onClick={()=>setLanguage(false)} href='/hi-IN' title="India" className="border border-gray-300 flex items-center justify-center cursor-pointer transition-all duration-300 bg-slate-300/50 backdrop-blur-md  shadow p-2 rounded-full size-12 hover:bg-gray-50">
+                <Flag code="IN" style={{ width: '30px', height: '20px' }} />
+              </Link>
+
+              {/* China Flag */}
+              <Link onClick={()=>setLanguage(false)} href='/zh-CN' title="China" className="border border-gray-300 flex items-center justify-center cursor-pointer transition-all duration-300 bg-slate-300/50 backdrop-blur-md  shadow p-2 rounded-full size-12 hover:bg-gray-50">
+                <Flag code="CN" style={{ width: '30px', height: '20px' }} />
+              </Link>
+
+              {/* Dubai Flag (Use UAE flag for Dubai) */}
+              <Link onClick={()=>setLanguage(false)} href='/ar-AE' title="Arabic" className="border border-gray-300 flex items-center justify-center cursor-pointer transition-all duration-300 bg-slate-300/50 backdrop-blur-md  shadow p-2 rounded-full size-12 hover:bg-gray-50">
+                <Flag code="AE" style={{ width: '30px', height: '20px' }} />
+              </Link>
+
+              </div>
+            </div>
+            <p className="rounded-full shadow size-10 p-1.5 bg-slate-300/50">
               <MoonIcon />
             </p>
           </div>

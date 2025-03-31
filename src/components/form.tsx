@@ -2,18 +2,21 @@ import { formConsultantItems } from "@/constants/contstant";
 import { action } from "@/lib/action";
 import ButtonUi from "@/ui/button";
 import TextField from "@/ui/textField";
-
+import { useTranslations } from "next-intl";
 
 const FormCosultant = () => {
+  const t = useTranslations();
+  const formConsultantItems = t.raw("formConsultantItems"); // Fetch form fields from JSON
+
   return (
     <form
       action={action}
       className="mt-8 rounded-3xl h-max mx-auto bg-slate-900 md:w-3/4 w-full flex flex-col gap-4 p-4 md:flex-row relative"
     >
       <div className=" w-full h-full grid grid-cols-2 p-2 gap-3 gap-y-7">
-        {formConsultantItems.map((i) => (
+        {formConsultantItems.map((i: any, index: number) => (
           <TextField
-            key={i.id}
+            key={index}
             {...i}
             className={`${
               i.name == "youtube"
@@ -22,9 +25,14 @@ const FormCosultant = () => {
             }`}
           />
         ))}
-        <ButtonUi size="max" color="primary" className="col-span-2 px-10 mx-auto">درخواست مشاوره</ButtonUi>
+        <ButtonUi
+          size="max"
+          color="primary"
+          className="col-span-2 px-10 mx-auto"
+        >
+          {t("submitButton")}{" "}
+        </ButtonUi>
       </div>
-
     </form>
   );
 };

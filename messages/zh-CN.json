@@ -1,25 +1,115 @@
 {
     "Header": {
-        "home": "主页",
-        "services": "服务",
-        "ports": "港口",
-        "faq": "常见问题",
-        "advice": "咨询",
-        "contact": "联系我们"
-    },
-    "Footer": {
-        "text": "本网站的所有权归属",
-        "name": "马赫迪耶·纳德里"
+      "home": "首页",
+      "services": "服务",
+      "ports": "港口",
+      "faq": "常见问题",
+      "advice": "咨询",
+      "contact": "联系我们"
     },
     "herosection": {
-        "slogan": "在国际贸易的世界里，我们与你同行！",
-        "text": "全程陪伴您的货物进口"
+      "slogan": "我们陪伴您走向国际贸易世界！",
+      "text": "全程陪伴您的货物进口每一个阶段"
     },
-    "services": {
-        "title": "服务",
-        "customs": "海关服务",
-        "trading": "外汇交易服务",
-        "insurance": "保险服务",
-        "transport": "运输服务"
-    }
-}
+    "servicesTitle": "服务",
+    "services": [
+      {
+        "title": "海关服务",
+        "src": "/images/customs.jpg",
+        "options": ["海关申报", "货物清关", "仓储管理"]
+      },
+      {
+        "title": "外汇交易服务",
+        "src": "/images/currency.webp",
+        "options": ["外汇分配", "货币兑换", "外汇买卖"]
+      },
+      {
+        "title": "保险服务",
+        "src": "/images/insurance.jpg",
+        "options": ["运输各阶段货物保险"]
+      },
+      {
+        "title": "运输服务",
+        "src": "/images/transportation.jpg",
+        "options": [
+          "海运、陆运、空运",
+          "交叉装货",
+          "过境运输，集装箱预订",
+          "换提单"
+        ]
+      }
+    ],
+    "portsTitle": "主要合作港口",
+    "ports": [
+      {
+        "title": "中国",
+        "src": "/images/china.png",
+        "options": ["上海", "深圳", "天津", "广州", "香港"]
+      },
+      {
+        "title": "迪拜",
+        "src": "/images/dubai.png",
+        "options": ["杰贝阿里", "拉希德港", "迪拜港", "阿布扎比"]
+      },
+      {
+        "title": "印度",
+        "src": "/images/india.png",
+        "options": ["那瓦西瓦", "蒙德拉", "孟买", "金奈", "诺伊达"]
+      }
+    ],
+    "requestAdviseTitle": "咨询请求",
+    "formConsultantItems": [
+      {
+        "label": "全名",
+        "placeholder": "请输入您的姓名...",
+        "name": "name"
+      },
+      {
+        "label": "电话号码",
+        "placeholder": "请输入您的电话号码...",
+        "name": "phone"
+      },
+      {
+        "label": "电子邮件地址",
+        "placeholder": "请输入您的电子邮件地址...",
+        "name": "mail"
+      },
+      {
+        "label": "推荐人姓名（可选）",
+        "placeholder": "请输入推荐人姓名...",
+        "name": "representative"
+      }
+    ],
+    "submitButton": "请求咨询",
+    "FAQ": [
+      {
+        "title": "进口货物需要多长时间？",
+        "reply": "进口时间取决于原产国：\n- 中国：8至10周（海运）\n- 迪拜：2至3周\n- 印度：3至4周\n- 空运：10至12天"
+      },
+      {
+        "title": "有哪些运输方式？",
+        "reply": "我们提供多种运输方式：\n- 海运：适用于大宗货物，成本较低但时间较长。\n- 空运：更快但成本更高。\n- 陆运：适用于特定路线。"
+      },
+      {
+        "title": "进口需要哪些文件？",
+        "reply": "所需文件包括：\n- 商业发票\n- 装箱单\n- 海运提单或航空运单\n- 海关申报文件\n- 任何其他国家特定的许可证"
+      },
+      {
+        "title": "你们提供清关服务吗？",
+        "reply": "是的，我们处理所有清关程序，包括关税计算、文件准备和与当地海关的协调。"
+      },
+      {
+        "title": "我可以跟踪我的货物吗？",
+        "reply": "是的，根据运输方式，我们提供不同的货物跟踪选项。货物发出后，您将收到跟踪信息。"
+      },
+      {
+        "title": "进口货物有何限制？",
+        "reply": "是的，某些商品需要特殊许可证，或者可能受到伊朗海关的限制。请联系我们了解具体法规。"
+      },
+      {
+        "title": "进口成本如何计算？",
+        "reply": "进口成本取决于以下因素：\n- 运输费用\n- 关税和税费\n- 保险费用\n- 处理和清关费用"
+      }
+    ]
+  }
+  

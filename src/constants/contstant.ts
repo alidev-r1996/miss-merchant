@@ -61,7 +61,7 @@ export const Ports = [
     options: ["Shanghai", "Shenzhen", "Tianjin", "Guangzhou", "Hong Kong"],
   },
   {
-    title: "دوبی",
+    title: "دبی",
     src: "/images/dubai.png",
     options: ["Jebel Ali", "Mina Rashid", "Dubai Port", "Abu Dhabi"],
   },

@@ -1,31 +1,119 @@
 {
-    "Header":{
-        "home": "Home",
-        "services": "Services",
-        "ports": "Ports",
-        "faq": "FAQ",
-        "advice":"Advice",
-        "contact": "Contact"
-    },
-    "Footer":{
-        "text": "All rights to this website belong to",
-        "name": "mahdiyeh naderi"
-    },
-    "herosection":{
-        "slogan": "We are with you in the world of international trade!",
-        "text": "Accompanying you throughout all stages of importing goods"
-    },
-    "services":{
-        "title": "Services",
-        "customs": {
-            "title": "Customs services",
-            "options1": "",
-            "options2": "",
-            "options3": ""
-        },
-        "trading": "Trading foreign exchange services",
-        "insurance": "Insurance Services",
-        "transport": "Transportation services"
-    }
+  "Header": {
+    "home": "Home",
+    "services": "Services",
+    "ports": "Ports",
+    "faq": "FAQ",
+    "advice": "Advice",
+    "contact": "Contact"
+  },
+  "herosection": {
+    "slogan": "We are with you in the world of international trade!",
+    "text": "Accompanying you throughout all stages of importing goods"
+  },
 
+  "servicesTitle": "Services",
+  "services": [
+    {
+      "title": "Customs Services",
+      "src": "/images/customs.jpg",
+      "options": ["Customs Declaration", "Cargo Clearance", "Inventory"]
+    },
+    {
+      "title": "Commercial Currency Services",
+      "src": "/images/currency.webp",
+      "options": [
+        "Currency Allocation",
+        "Currency Exchange",
+        "Buying and Selling Currency"
+      ]
+    },
+    {
+      "title": "Insurance Services",
+      "src": "/images/insurance.jpg",
+      "options": ["Cargo insurance at all stages of transportation"]
+    },
+    {
+      "title": "Transportation Services",
+      "src": "/images/transportation.jpg",
+      "options": [
+        "Sea, Land, Air Transport",
+        "Cross Stuffing",
+        "Transit, Container Reservation",
+        "Switch Bill of Lading"
+      ]
+    }
+  ],
+  "portsTitle": "Main Partner Ports",
+  "ports": [
+    {
+      "title": "China",
+      "src": "/images/china.png",
+      "options": ["Shanghai", "Shenzhen", "Tianjin", "Guangzhou", "Hong Kong"]
+    },
+    {
+      "title": "Dubai",
+      "src": "/images/dubai.png",
+      "options": ["Jebel Ali", "Mina Rashid", "Dubai Port", "Abu Dhabi"]
+    },
+    {
+      "title": "India",
+      "src": "/images/india.png",
+      "options": ["Navashiva", "Mundra", "Mumbai", "Chennai", "Noida"]
+    }
+  ],
+  "requestAdviseTitle": "Consultation Request",
+  "formConsultantItems": [
+    {
+      "label": "Full Name",
+      "placeholder": "Enter your name...",
+      "name": "name"
+    },
+    {
+      "label": "Phone Number",
+      "placeholder": "Enter your phone number...",
+      "name": "phone"
+    },
+    {
+      "label": "Email Address",
+      "placeholder": "Enter your email address...",
+      "name": "mail"
+    },
+    {
+      "label": "Referrer Name (Optional)",
+      "placeholder": "Enter your referrer’s name...",
+      "name": "representative"
+    }
+  ],
+  "submitButton": "Request Consultation",
+  "FAQ": [
+    {
+      "title": "How long does it take to import goods?",
+      "reply": "The import duration varies depending on the country of origin:\n- China: 8 to 10 weeks (Sea)\n- Dubai: 2 to 3 weeks\n- India: 3 to 4 weeks\n- Air Freight: 10 to 12 days"
+    },
+    {
+      "title": "What are the shipping methods available?",
+      "reply": "We offer multiple shipping options:\n- Sea Freight: Suitable for large shipments, cost-effective but takes longer.\n- Air Freight: Faster but more expensive.\n- Land Transport: Available for specific routes."
+    },
+    {
+      "title": "What documents are required for import?",
+      "reply": "The required documents include:\n- Commercial Invoice\n- Packing List\n- Bill of Lading (Sea) or Airway Bill (Air)\n- Customs Declaration\n- Any additional country-specific permits"
+    },
+    {
+      "title": "Do you provide customs clearance services?",
+      "reply": "Yes, we handle all customs clearance procedures, including tariff calculations, document preparation, and coordination with local authorities."
+    },
+    {
+      "title": "Can I track my shipment?",
+      "reply": "Yes, we provide tracking options based on the shipping method used. You will receive tracking details once your goods are dispatched."
+    },
+    {
+      "title": "Are there any restrictions on importing goods?",
+      "reply": "Yes, certain goods require special permits or may be restricted by Iranian customs. Please contact us for specific regulations on your products."
+    },
+    {
+      "title": "How are import costs calculated?",
+      "reply": "Import costs depend on factors such as:\n- Freight charges\n- Customs duties and taxes\n- Insurance fees\n- Handling and clearance costs"
+    }
+  ]
 }
