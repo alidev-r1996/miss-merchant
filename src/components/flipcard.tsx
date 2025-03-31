@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-type FlipCardProps = {
+export type FlipCardProps = {
     src: string;
     title: string;
     options: string[];

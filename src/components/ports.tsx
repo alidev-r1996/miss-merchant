@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-type PortProps= {
+export type PortProps= {
     src: string;
     title: string;
     options: string[];

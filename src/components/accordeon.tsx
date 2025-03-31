@@ -1,7 +1,7 @@
 
-type AccordeonProps = {
+export type AccordeonProps = {
   id: string,
-  title: any;
+  title: string;
   children: React.ReactNode;
 }
 

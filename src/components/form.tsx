@@ -1,4 +1,3 @@
-import { formConsultantItems } from "@/constants/contstant";
 import { action } from "@/lib/action";
 import ButtonUi from "@/ui/button";
 import TextField from "@/ui/textField";
@@ -14,7 +13,7 @@ const FormCosultant = () => {
       className="mt-8 rounded-3xl h-max mx-auto bg-slate-900 md:w-3/4 w-full flex flex-col gap-4 p-4 md:flex-row relative"
     >
       <div className=" w-full h-full grid grid-cols-2 p-2 gap-3 gap-y-7">
-        {formConsultantItems.map((i: any, index: number) => (
+        {formConsultantItems.map((i: { name: string; type: string , placeholder: string, label: string, id: number}, index: number) => (
           <TextField
             key={index}
             {...i}
