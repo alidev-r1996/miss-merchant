@@ -16,7 +16,7 @@ const Accordeon: React.FC<AccordeonProps> = ({id,title,children,index}) => {
             className={`${(index%2) == 0 ? "bg-teal-500 text-white": "bg-white text-teal-500"} block font-bold  md:text-xl cursor-pointer p-4 peer-checked/item1:bg-emerald-600  peer-checked/item1:text-white`}
           >{title}
           </label>
-          <div className="overflow-hidden bg-white max-h-0 px-4 peer-checked/item1:max-h-64 md:peer-checked/item1:max-h-56 transition-all duration-300">{children}
+          <div className="overflow-hidden bg-white text-slate-700 max-h-0 px-4 peer-checked/item1:max-h-64 md:peer-checked/item1:max-h-56 transition-all duration-300">{children}
           </div>
         </div>
      );

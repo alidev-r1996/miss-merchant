@@ -33,7 +33,7 @@ const ButtonUi: React.FC<ButtonProps> = ({
   const t = useTranslations();
 
   return (
-    <button {...clickAction && {onClick: clickAction}} disabled={disabled} className={`${className} ${colors[color]} ${sizes[size]} ${disabled && "!text-slate-500 bg-transparent"} disabled:pointer-events-none px-3 py-2 rounded-full transition-all duration-300 flex flex-nowrap items-center gap-2 hover:scale-105 active:scale-90`}>
+    <button {...clickAction && {onClick: clickAction}} disabled={disabled} className={`${className} ${colors[color]} ${sizes[size]} ${disabled && "!text-slate-500  bg-transparent"} disabled:pointer-events-none px-3 cursor-pointer py-2 rounded-full transition-all duration-300 flex flex-nowrap items-center gap-2 hover:scale-105 active:scale-90`}>
       {!pending ? t("submitButton") : t('submitButtonLoading')} {children}
     </button>
   );

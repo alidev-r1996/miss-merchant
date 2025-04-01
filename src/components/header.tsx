@@ -2,6 +2,7 @@
 
 import {
   Bars3Icon,
+  ChevronDownIcon,
   LanguageIcon,
   MoonIcon,
   SunIcon,
@@ -77,11 +78,15 @@ const Header = () => {
       <div className="flex items-center gap-4 ">
         <div
           onClick={() => setLanguage(!language)}
-          className={`${isScrolled ? "" : "bg-white/20 backdrop-blur-md "} rounded-full shadow size-9 p-1.5 relative text-blue-600 cursor-pointer hover:bg-white`}
+          className={`${isScrolled ? "" : "bg-white/20 backdrop-blur-md "} ${language ? " !bg-white" : ""} rounded-full text-blue-600 shadow w-max flex items-center justify-center pl-1 relative  cursor-pointer hover:bg-white`}
         >
-          <LanguageIcon />
+          <LanguageIcon className="size-9 p-2"/>
+          <p className="text-sm py-2">Language</p>
+          <p className={`${language ? "rotate-180" : "rotate-0"} transition-all duration-200`}>
+            <ChevronDownIcon className="size-9 py-2"/>
+          </p>
           <div
-            className={`${language ? "h-72" : "h-0"} flex transition-all duration-300 flex-col gap-2 absolute top-14 -left-1 overflow-hidden`}
+            className={`${language ? "h-72" : "h-0"} flex transition-all duration-300 flex-col gap-2 absolute top-14 right-0 overflow-hidden`}
           >
             {Countries.map((i) => {
               return (
