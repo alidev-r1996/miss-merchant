@@ -10,7 +10,7 @@ import PortSection from "@/components/PortsSection";
 
 export default function Home() {
   return (
-    <div className="bg-slate-100 min-h-screen max-w-screen snap-y snap-mandatory scroll-smooth">
+    <div className="bg-slate-100 text-slate-800 dark:bg-slate-700 dark:text-slate-300 min-h-screen max-w-screen snap-y snap-mandatory scroll-smooth">
       <main className="w-full">
         <Header />
         <Herosection />

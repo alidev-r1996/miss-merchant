@@ -39,7 +39,7 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html lang="en" dir={`${locale == 'fa' || locale == 'ar-AE' ? "rtl": "ltr"}`} className="snap-y snap-mandatory scroll-smooth">
+    <html lang="en" dir={`${locale == 'fa' || locale == 'ar-AE' ? "rtl": "ltr"}`} className="snap-y snap-mandatory scroll-smooth ">
       <body
         className={`${Vazir.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >

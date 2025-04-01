@@ -6,7 +6,7 @@ const ConsultantSection = () => {
   return (
     <div
       id="request_advise"
-      className="w-full h-max snap-y snap-start snap-mandatory  p-4"
+      className="w-full h-max snap-y snap-start snap-mandatory mt-30  p-4"
     >
       <h1 className="font-bold text-2xl mb-10 text-center">
         {t("requestAdviseTitle")}
